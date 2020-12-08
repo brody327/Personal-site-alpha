@@ -31,51 +31,6 @@
 		<link rel="stylesheet" href="../src/css/owl.carousel.min.css" />
 		<link rel="stylesheet" href="../src/css/style.css" />
 
-		<!--====== Jquery & Javascripts files  ======-->
-		<script src="../src/jquery-2.1.4.min.js"></script>
-		<script src="../src/jquery.nav.min.js"></script>
-		<script src="../src/isotope.pkgd.min.js"></script>
-		<script src="../src/owl.carousel.min.js"></script>
-		<script src="../src/magnific-popup.min.js"></script>
-		<script src="../src/wow.min.js"></script>
-		<script src="../src/scripts.js"></script>
-		<script
-			type="text/javascript"
-			src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
-		></script>
-		<script type="text/javascript">
-			(function () {
-				emailjs.init('user_nQRIvE1XNJjIRbWrcvldi');
-			})();
-		</script>
-		<script type="text/javascript">
-			window.onload = function () {
-				document
-					.getElementById('contact-form')
-					.addEventListener('submit', function (event) {
-						event.preventDefault();
-						// generate a five digit number for the contact_number variable
-						this.contact_number.value =
-							(Math.random() * 100000) | 0;
-						// these IDs from the previous steps
-						emailjs
-							.sendForm(
-								'service_lv5l73k',
-								'template_8vwbcgd',
-								this
-							)
-							.then(
-								function () {
-									console.log('SUCCESS!');
-								},
-								function (error) {
-									console.log('FAILED...', error);
-								}
-							);
-					});
-			};
-		</script>
-
 		<!--[if lt IE 9]>
 			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -165,7 +120,7 @@
 						<a
 							href="../public/img/works/1.png"
 							class="portfolio-item set-bg"
-							data-setbg="img/works/1.png"
+							data-setbg="../public/img/works/1.png"
 						>
 							<div class="portfolio-text">
 								<h2>Grandma's Mac</h2>
@@ -592,4 +547,43 @@
 		</footer>
 		<!-- Footer section start end -->
 	</body>
+	<!--====== Jquery & Javascripts files  ======-->
+	<script src="../src/jquery-2.1.4.min.js"></script>
+	<script src="../src/jquery.nav.min.js"></script>
+	<script src="../src/isotope.pkgd.min.js"></script>
+	<script src="../src/owl.carousel.min.js"></script>
+	<script src="../src/magnific-popup.min.js"></script>
+	<script src="../src/wow.min.js"></script>
+	<script src="../src/scripts.js"></script>
+	<script
+		type="text/javascript"
+		src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
+	></script>
+	<script type="text/javascript">
+		(function () {
+			emailjs.init('user_nQRIvE1XNJjIRbWrcvldi');
+		})();
+	</script>
+	<script type="text/javascript">
+		window.onload = function () {
+			document
+				.getElementById('contact-form')
+				.addEventListener('submit', function (event) {
+					event.preventDefault();
+					// generate a five digit number for the contact_number variable
+					this.contact_number.value = (Math.random() * 100000) | 0;
+					// these IDs from the previous steps
+					emailjs
+						.sendForm('service_lv5l73k', 'template_8vwbcgd', this)
+						.then(
+							function () {
+								console.log('SUCCESS!');
+							},
+							function (error) {
+								console.log('FAILED...', error);
+							}
+						);
+				});
+		};
+	</script>
 </html>
