@@ -59,6 +59,15 @@
 	--------------------*/
 	var $container = $('.isotope_items');
 	$container.isotope();
+	// $container.isotope({
+	// 	itemSelector: '.element',
+	// 	getSortData: {
+	// 		name: '.name',
+	// 		date: function ($elem) {
+	// 			return Date.parse($elem.find('.date').text());
+	// 		},
+	// 	},
+	// });
 
 	$('.portfolio-filter li').on('click', function () {
 		$('.portfolio-filter li').removeClass('active');
@@ -74,6 +83,13 @@
 		});
 		return false;
 	});
+	// $('.portfolio-sort li').on('click', function () {
+	// 	$('.portfolio-sort li').removeClass('active');
+	// 	$(this).addClass('active');
+	// 	var sortByValue = $(this).attr('data-sort');
+	// 	$container.isotope({ sortBy: sortByValue });
+	// 	return false;
+	// });
 
 	/*------------------
 		Testimonial
